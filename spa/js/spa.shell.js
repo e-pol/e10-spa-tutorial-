@@ -17,6 +17,7 @@ spa.shell = (function () {
 
 
   // ----------------- BEGIN MODULE SCOPE VARIABLES -----------------------
+
   var
     configMap = {
       anchor_schema_map : {
@@ -52,18 +53,22 @@ spa.shell = (function () {
 
     copyAnchorMap, setJqueryMap, toggleChat, changeAnchorPart, onHashChange,
     onClickChat, initModule;
+
   // --------------------- END MODULE SCOPE VARIABLES ----------------------
 
 
   // ------------------------ BEGIN UTILITY METHODS ------------------------
+
   // Returns copy of stored anchor map; minimizes overhead
   copyAnchorMap = function () {
     return $.extend( true, {}, stateMap.anchor_map );
   };
+
   // ------------------------- END UTILITY METHODS -------------------------
 
 
   // -------------------------- BEGIN DOM METHODS --------------------------
+
   // Begin DOM method /setJqueryMap/
   setJqueryMap = function () {
     var $container = stateMap.$container;
@@ -195,10 +200,12 @@ spa.shell = (function () {
     return bool_return;
   };
   // End DOM method /changeAnchorPart/
+
   //---------------------------- END DOM METHODS ---------------------------
 
 
   //-------------------------- BEGIN EVENT HANDLERS ------------------------
+
   // Begin Event handler /onHashchange/
   // Purpose : Handles the hashchange event
   // Arguments:
@@ -258,10 +265,12 @@ spa.shell = (function () {
     return false;
   };
   // End Event handler /onClickChat/
+
   //--------------------------- END EVENT HANDLERS -------------------------
 
 
   //-------------------------- BEGIN PUBLIC METHODS ------------------------
+
   // Begin Public method /initModule/
   initModule = function ( $container ) {
     // load HTML and map jQuery collections
@@ -293,5 +302,8 @@ spa.shell = (function () {
   // End Public method /initModule/
 
   return { initModule : initModule };
+
   // ------------------------- END PUBLIC METHODS --------------------------
+
+
 }());
